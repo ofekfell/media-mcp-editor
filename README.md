@@ -76,9 +76,33 @@ sudo apt update && sudo apt install ffmpeg
 
 ## 🚀 Usage
 
-```bash
-python server.py
+
+### 🔗 **Connect to LLM Clients**
+
+This MCP server can be integrated with various LLM clients that support the Model Context Protocol:
+
+#### **Claude Desktop**
+Add to your `claude_desktop_config.json`:
+```json
+{
+  "mcpServers": {
+    "media-mcp": {
+      "command": "/Users/yourusername/.local/bin/uv",
+      "args": [
+        "--directory",
+        "/path/to/media-mcp-editor",
+        "run",
+        "server.py"
+      ]
+    }
+  }
+}
 ```
+
+#### **Other MCP-Compatible Clients**
+- **Connection**: Use stdio transport with the server command
+- **Protocol**: Model Context Protocol (MCP)
+- **Tools Available**: All media processing operations listed below
 
 ---
 
@@ -129,7 +153,7 @@ python server.py
 
 **🗣️ User:** *"What are the technical details of my video file?"*
 
-**🤖 MCP Response:**
+**🤖 Generated Workflow for Rendering:**
 ```json
 {
   "tool": "get_media_info",
@@ -143,7 +167,7 @@ python server.py
 
 **🗣️ User:** *"I need to trim the first 30 seconds from my video"*
 
-**🤖 MCP Response:**
+**🤖 Generated Workflow for Rendering:**
 ```json
 {
   "action": "trim",
@@ -158,7 +182,7 @@ python server.py
 
 **🗣️ User:** *"Combine my intro, main content, and outro videos into one file"*
 
-**🤖 MCP Response:**
+**🤖 Generated Workflow for Rendering:**
 ```json
 {
   "action": "concat",
@@ -176,7 +200,7 @@ python server.py
 
 **🗣️ User:** *"Scale my video to 1080p, add a 2-second fade-in at the beginning, then trim it to 15 seconds starting from the 5-second mark"*
 
-**🤖 MCP Response:**
+**🤖 Generated Workflow for Rendering:**
 ```json
 {
   "action": "trim",
@@ -199,7 +223,7 @@ python server.py
 
 **🗣️ User:** *"Add a small overlay video in the top-right corner of my main video"*
 
-**🤖 MCP Response:**
+**🤖 Generated Workflow for Rendering:**
 ```json
 {
   "action": "overlay",
@@ -217,7 +241,7 @@ python server.py
 
 **🗣️ User:** *"Create a smooth 2-second crossfade transition between two 10-second video clips"*
 
-**🤖 MCP Response:**
+**🤖 Generated Workflow for Rendering:**
 ```json
 {
   "action": "crossfade",
@@ -239,7 +263,7 @@ python server.py
 
 **🗣️ User:** *"Make the audio 50% louder and change the sample rate to 48kHz"*
 
-**🤖 MCP Response:**
+**🤖 Generated Workflow for Rendering:**
 ```json
 {
   "action": "audio_resample",
