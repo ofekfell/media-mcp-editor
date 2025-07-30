@@ -149,20 +149,6 @@ Add to your `claude_desktop_config.json`:
 
 *Showcasing MCP's natural language interface that generates JSON workflows*
 
-### 📋 **Media Analysis**
-
-**🗣️ User:** *"What are the technical details of my video file?"*
-
-**🤖 Generated Workflow for Rendering:**
-```json
-{
-  "tool": "get_media_info",
-  "input_address": "video.mp4"
-}
-```
-
----
-
 ### 🎬 **Simple Video Editing**
 
 **🗣️ User:** *"I need to trim the first 30 seconds from my video"*
