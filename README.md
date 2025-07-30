@@ -16,6 +16,11 @@
 
 </div>
 
+## 🤖 Process Steps
+
+**Natural Language Request -> Editing Workflow Building -> Workflow Rendering
+**
+
 ## ✨ Features
 
 ### 📊 **Media Information & Analysis**
