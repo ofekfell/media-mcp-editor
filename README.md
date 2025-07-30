@@ -18,8 +18,7 @@
 
 ## 🤖 Process Steps
 
-**Natural Language Request -> Editing Workflow Building -> Workflow Rendering
-**
+Natural Language Request -> Editing Workflow Building -> Workflow Rendering
 
 ## ✨ Features
 
